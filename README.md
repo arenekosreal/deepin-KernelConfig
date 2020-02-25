@@ -15,7 +15,7 @@ It is not easy for a beginner to try to compile a Linux Kernel. What I suggest i
 - Go to the parent directory and you may find some new files, which contains four `.deb` files, their name begin with 'linux-'.
 - Copy or move these files to a new empty directory, execute `sudo dpkg -i *.deb` in that directory and wait until installed successfully. You may find some errors during installation, they doesn't matter, just go ahead.
 - Restart, in the boot menu, choose the second option, you will find three new options contains word `custom`, choose the first one of these options.
-- Wait until your system shows you login screen, login normally, in the terminal, execute `uname -a` and you will find your kernel was loaded successfully.  
+- Wait until your system shows you login screen, login normally, execute `uname -a` in the terminal and you will find your kernel was loaded successfully.  
 
 **Note:**  
 - Backup your files before installing kernel! It may break your system and you will spend more enegy on fixing it.
