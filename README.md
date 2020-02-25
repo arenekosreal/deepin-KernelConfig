@@ -20,3 +20,4 @@ It is not easy for a beginner to try to compile a Linux Kernel. What I suggest i
 **Note:**  
 - Backup your files before installing kernel! It may break your system and you will spend more enegy on fixing it.
 - If you want to uninstall this kernel, just remove them as they are normal software packages. Of course, you should reboot system to another kernel such as version 4.15 in your system.
+- Forget about my poor English, it is a little inconvenient for a non-English speaker to write this.
