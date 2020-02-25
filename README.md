@@ -6,9 +6,10 @@ Just a config file for compiling kernel 5.x on deepin ,a popular linux GNU versi
 Download the file named `.config` ,and put it in the root directory of your kernel source code, finally, start compiling normally.
 ## How to compile a Linux Kernel?
 It is not easy for a beginner to try to compile a Linux Kernel. What I suggest is that you should at least know how to use Terminal. Then, do these things:  
-- Download Kernel source tarball from [kernel.org](https://kernel.org)
-- Extract Kernel source code files using an uncompress software
-- Enter the directory where you extract source files, it should has these files:`Makefiles`,`COPYING`,`README` and so on.
+- Prepare at least 25 GB space for compiling source code.
+- Download Kernel source tarball from [kernel.org](https://kernel.org).
+- Extract Kernel source code files using an uncompress software.
+- Enter the directory where you extract source files, it should contain these files:`Makefiles`,`COPYING`,`README` and so on. It is also the root directory of kernel source code.
 - Download the `.config` file from this repository, put it in the directory I mentioned before.
 - If you haven't compiled anything before, execute this command in Terminal: `sudo apt install build-essential libncurses5-dev fakeroot`, or ignore this.
 - After done everything above successfully, execute `make deb-pkg LOCALVERSION=-custom KDEB_PKGVERSION=$(make kernelversion)-1` in Terminal and wait until it stop automatically. It will take a long time, I spent about 3 hours on it.
