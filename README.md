@@ -11,10 +11,10 @@ It is not easy for a beginner to try to compile a Linux Kernel. What I suggest i
 - Extract Kernel source code files using an uncompress software.
 - Enter the directory where you extract source files, it should contain these files:`Makefiles`,`COPYING`,`README` and so on. It is also the root directory of kernel source code.
 - Download the `.config` file from this repository, put it in the directory I mentioned before.
-- If you haven't compiled anything before, execute this command in Terminal: `sudo apt install build-essential libncurses5-dev fakeroot`, or ignore this.
-- After done everything above successfully, execute `make deb-pkg LOCALVERSION=-custom KDEB_PKGVERSION=$(make kernelversion)-1` in Terminal and wait until it stop automatically. It will take a long time, I spent about 3 hours on it.
-- Go to the parent directory and you may find some new files, which contains four `.deb` files, their name begin with 'linux-'.
-- Copy or move these files to a new empty directory, execute `sudo dpkg -i *.deb` in that directory and wait until installed successfully. You may find some errors during installation, they doesn't matter, just go ahead.
+- Execute this command in Terminal: `sudo apt install build-essential libncurses5-dev fakeroot`.
+- After done everything above successfully, execute `make deb-pkg LOCALVERSION=-custom KDEB_PKGVERSION=$(make kernelversion)-1` in Terminal and wait until it stop automatically and return to terminal prompt. It will take a long time, I spent about 3 hours on it.
+- Go to the parent directory of the source code's root directory, and you may find some new files, which contains four `.deb` files, their name begin with 'linux-', two compressed files in `.gz` format, and three text files.
+- Copy or move these `.deb` files to a new empty directory, execute `sudo dpkg -i *.deb` in that directory and wait until installed successfully. You may find some errors during installation, they doesn't matter, just go ahead.
 - Restart, in the boot menu, choose the second option, you will find three new options contains word `custom`, choose the first one of these options.
 - Wait until your system shows you login screen, login normally, execute `uname -a` in the terminal and you will find your kernel was loaded successfully.  
 
