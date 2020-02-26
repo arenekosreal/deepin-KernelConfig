@@ -14,11 +14,11 @@ It is not easy for a beginner to try to compile a Linux Kernel. What I suggest i
 - Execute this command in Terminal: `sudo apt install build-essential libncurses5-dev fakeroot`.
 - After done everything above successfully, execute `make deb-pkg LOCALVERSION=-custom KDEB_PKGVERSION=$(make kernelversion)-1` in Terminal and wait until it stop automatically and return to terminal prompt. It will take a long time, I spent about 3 hours on it.
 - Go to the parent directory of the source code's root directory, and you may find some new files, which contains four `.deb` files, their name begin with 'linux-', two compressed files in `.gz` format, and three text files.
-- Copy or move these `.deb` files to a new empty directory, execute `sudo dpkg -i *.deb` in that directory and wait until installed successfully. You may find some errors during installation, they doesn't matter, just go ahead.
-- Restart, in the boot menu, choose the second option, you will find three new options contains word `custom`, choose the first one of these options.
-- Wait until your system shows you login screen, login normally, execute `uname -a` in the terminal and you will find your kernel was loaded successfully.  
+- Copy or move these `.deb` files to a new empty directory, execute `sudo dpkg -i *.deb` in that directory and wait until installed successfully. You may find some errors during installation, don't worry, just go ahead.
+- Restart, in the boot menu, choose the second option, you will find three new options contains word `custom`, choose the first one of these options (no `systemd` or `recovery` in it name).
+- Wait until your system shows you login screen, login normally, execute `uname -a` in the terminal and you will find your new kernel was loaded successfully.  
 
 **Note:**  
-- Backup your files before installing kernel! It may break your system and you will spend more enegy on fixing it.
-- If you want to uninstall this kernel, just remove them as normal software packages. Of course, before removing, you should reboot system to another kernel such as kernel version 4.15 in your system.
-- Forget about my poor English, it is a little inconvenient for a non-English speaker to write this.
+- Backup your files before installing kernel!!! It may break your system and you will spend more enegy on fixing it.
+- If you want to uninstall this kernel, just remove them as normal software packages. Of course, before removing, you should reboot system to another kernel such as kernel version 4.15 in your original system.
+- Forget about my poor English, it is a little inconvenient for a non-English speaker to write this file.
