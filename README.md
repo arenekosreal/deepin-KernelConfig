@@ -17,7 +17,7 @@ It is not easy for a beginner to try to compile a Linux Kernel. What I suggest i
 - Copy or move these `.deb` files to a new empty directory, execute `sudo dpkg -i *.deb` in that directory and wait until installed successfully. You may find some errors during installation, don't worry, just go ahead.
 - Restart, in the boot menu, choose the second option, you will find three new options contains word `custom`, choose the first one of these options (no `systemd` or `recovery` in it name).
 - Wait until your system shows you login screen, login normally, execute `uname -a` in the terminal and you will find your new kernel was loaded successfully.  
-## I don't want to compile a custom kernel, but I want to try any new features of a new kernel, what should I do?
+## I don't want to compile a custom kernel, but I want to try any new feature of a new kernel, what should I do?
 Go to ubuntu ppa source ([here](https://kernel.ubuntu.com/~kernel-ppa/mainline/)), download kernel which you need, install these `.deb` files you have downloaded and restart system, then, you can find new kernel in boot menu like you install your custom version from here. For most people, I suggest choosing the 'generic' kernel version. You can google `the difference between lowlatency and generic` to find more.
 
 **Note:**  
